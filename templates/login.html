@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">Helpdesk System</div>
+    <div class="menu">
+        <a href="/dashboard">Home</a>
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+    </div>
+</div>
+
+<!-- PAGE CONTENT -->
+<div class="page">
+
+    <div class="page-title">
+        <h1>Welcome Back</h1>
+        <p>Login to continue to the Helpdesk System</p>
+    </div>
+
+    <div class="card">
+        <h2>Login</h2>
+
+        <form method="POST">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>

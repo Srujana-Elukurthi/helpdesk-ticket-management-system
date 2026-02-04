@@ -1,0 +1,136 @@
+/* ---------- GLOBAL ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+    width: 100%;
+    height: 70px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #5a67d8;
+}
+
+.navbar .menu {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar .menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navbar .menu a:hover {
+    color: #5a67d8;
+}
+
+/* ---------- PAGE LAYOUT ---------- */
+.page {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ---------- PAGE TITLE ---------- */
+.page-title {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.page-title h1 {
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+.page-title p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* ---------- CARD ---------- */
+.card {
+    background: #ffffff;
+    width: 380px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+.card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* ---------- FORM ---------- */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 14px;
+}
+
+input:focus, textarea:focus {
+    border-color: #5a67d8;
+    box-shadow: 0 0 6px rgba(90,103,216,0.4);
+}
+
+textarea {
+    resize: none;
+}
+
+/* ---------- BUTTON ---------- */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #5a67d8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #434190;
+}
+
+/* ---------- MESSAGE ---------- */
+#msg {
+    text-align: center;
+    margin-top: 12px;
+    color: green;
+    font-weight: 600;
+}

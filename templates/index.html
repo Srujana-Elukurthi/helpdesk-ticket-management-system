@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Helpdesk System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">Helpdesk System</div>
+    <div class="menu">
+        <a href="/dashboard">Home</a>
+        <a href="/dashboard">Raise Ticket</a>
+        <a href="/admin">Admin</a>
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+    </div>
+</div>
+
+<!-- PAGE CONTENT -->
+<div class="page">
+
+    <div class="page-title">
+        <h1>Helpdesk Ticket Management System</h1>
+        <p>Submit your issue and track its resolution</p>
+    </div>
+
+    <div class="card">
+        <h2>Raise a Ticket</h2>
+
+        <form id="ticketForm">
+            <input type="text" id="title" placeholder="Issue Title" required>
+            <textarea id="description" rows="4" placeholder="Describe your issue..." required></textarea>
+            <button type="submit">Submit Ticket</button>
+        </form>
+
+        <p id="msg"></p>
+    </div>
+
+</div>
+
+<script>
+document.getElementById("ticketForm").onsubmit = async function(e) {
+    e.preventDefault();
+
+    const response = await fetch("/create-ticket", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            title: document.getElementById("title").value,
+            description: document.getElementById("description").value
+        })
+    });
+
+    const result = await response.json();
+    document.getElementById("msg").innerText = result.message;
+    document.getElementById("ticketForm").reset();
+};
+</script>
+
+</body>
+</html>

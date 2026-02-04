@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+<h2>Admin Dashboard – All Tickets</h2>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Status</th>
+    </tr>
+
+    {% for ticket in tickets %}
+    <tr>
+        <td>{{ ticket.title }}</td>
+        <td>{{ ticket.description }}</td>
+        <td>{{ ticket.status }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
